@@ -178,15 +178,18 @@ audio {
     left: 5px;
 }
 
-main h2 {
-    display: flex;
+#heading2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0;
 }
 
 main #playlists {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "#playlist1 #playlist2";
-    grid-gap: 10px;
+    grid-gap: 0px;
     margin: 20px;
     padding: 20px;
 }
@@ -195,29 +198,28 @@ section #playlists {
     width: auto;
 }
 
-.yours, .curated {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 20px;
-    align-items: center;
+#playlists .curated {
+    background-color: var(--color-secondary);
 }
 
-.yours section, .curated section {
-    margin: 10px;
-    position: relative;
+#playlists .yours {
+    background-color: var(--color-accent);
 }
 
-.playlist1 div, .playlist2 div {
-    position: absolute;
-    top: 251px;
-    background-color: rgba(255,255,255,0.75);
-    padding: 0px;
-    height: 60px;
-    width: 350px;
-    align-items: center;
-    font-size: 1em;
-    margin: 0;
-    padding: 10px;
+section .yours {
+    background-color: var(--color-accent);
+}
+
+.yours div {
+    background-color: var(--color-accent);
+}
+
+.yours h3, .curated h3 {
+    color: var(--color-neutral);
+}
+
+.yours p, .curated p {
+    color: var(--color-neutral);
 }
 
 footer p {
