@@ -1,0 +1,351 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --color-background: #020659;
+    --color-primary: #020873;
+    --color-secondary: #030a8c;
+    --color-accent: #0d8dfb;
+    --color-accent2: #2104d9;
+    --color-accent3: #2699fb;
+    --color-accent4: #590242;
+    --color-neutral: #fffdfd;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0px;
+}   
+
+body {
+    max-width: 1280px;
+    background-color: var(--color-background);
+    color: var(--color-accent4);
+    width: 1280px;
+    margin: 0px;
+    padding: 0 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    display: grid;
+    background: linear-gradient(to right, var(--color-accent2), var(--color-background));
+    height: 120px;
+    position: relative;
+    top: 150px;
+    margin: 20px;
+    padding: 10px;
+}
+
+header h1 {
+    font-size: 1.25em;
+    color: var(--color-neutral);
+    margin: 0px;
+    padding: 0px;
+    margin-right: 10px;
+}
+
+header p {
+    font-size: 1em;
+    color: var(--color-neutral);
+    width: 80%;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+nav {
+    background-color: var(--color-accent2);
+    position: relative;
+    bottom: 20px;
+    top: -100px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 0px;
+    height: 100px;
+    width: 1200px;
+ }
+   
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    margin: 30px;
+    padding: 20px;
+}
+
+nav li {
+    color: var(--color-neutral);
+    align-self: center;
+    justify-self: center;
+    padding: 0px;
+    font-size: small;
+    margin: 20px;
+    padding: 0px;
+}
+
+nav li:first-child {
+    font-family: Tahoma;
+    font-size: larger;
+}
+
+nav a {
+    color: var(--color-neutral);
+    text-decoration: none;
+}
+
+main {  
+    background-color: var(--color-neutral);
+    width: 1200px;
+    padding: 0px;
+    margin: 20px;
+}
+
+main h2 {
+    margin: 20px;
+    padding-top: 20px;
+    margin-right: 20px;
+}
+
+h1 {
+    color: var(--color-neutral);
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+
+h2, h3 {
+    font-size: 1em;
+    color: var(--color-accent4);
+    text-transform: uppercase;
+    font-weight: bold;
+}   
+
+p {
+    font-size: 1em;
+}
+
+.scroll {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 20px;
+}
+
+.scroll section {
+    margin: 10px;
+    position: relative;
+}
+
+.scroll div {
+    position: absolute;
+    top: 251px;
+    background-color: rgba(255,255,255,0.75);
+    padding: 0px;
+    height: 60px;
+    width: 350px;
+    align-items: center;
+    font-size: 1em;
+    margin: 0;
+    padding: 10px;
+}
+
+dl {
+    display: flex;
+    font-size: 1em;
+}
+
+dt {
+    padding-right: 5px;
+    margin: 0;
+    font-size: 1em;
+    font-style: italic;
+}
+
+dd {
+    font-size: 1em;
+    margin: 0px;
+}
+
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+
+#heading2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+main #playlists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "#playlist1 #playlist2";
+    grid-gap: 0px;
+    margin: 20px;
+    padding: 20px;
+}
+
+section #playlists {
+    width: auto;
+}
+
+#playlists .curated {
+    background-color: var(--color-secondary);
+}
+
+#playlists .yours {
+    background-color: var(--color-accent);
+}
+
+section .yours {
+    background-color: var(--color-accent);
+}
+
+.yours div {
+    background-color: var(--color-accent);
+}
+
+.yours h3, .curated h3 {
+    color: var(--color-neutral);
+}
+
+.yours p, .curated p {
+    color: var(--color-neutral);
+}
+
+footer p {
+    font-size: .75em;
+} 
+
+
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+
+#trending ::-webkit-scrollbar-thumb {
+    background-color: #590242;
+    border-radius: 5px;
+}
+
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: var(--color-neutral);
+    border-radius: 100px;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: var(--color-neutral);
+    border-radius: 100px;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(255,255,255,0.5);
+
+}
+
+.yours ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px var(--color-primary);
+}
+
+.yours ::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: 5px;
+}
+
+.yours ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+
+.curated ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px var(--color-primary);;
+}
+
+.curated ::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: 5px;
+}
+
+.curated ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+
+@media screen and (min-width: 375px) {
+    ul {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+    }
+    label {
+        cursor: pointer;
+        display: inline-block;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+    label span {
+        background-color: #ffffff;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background-color .2s ease-out;
+        width: 18px;
+    }
+    label span:before, label span:after {
+        background: #ffffff;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    label span:before {
+        top: 5px;
+    }
+    label span:after {
+        top: -5px;
+    }
+    input {
+        display: none;
+    }
+    input:checked ~ ul {
+        max-height: 500px;
+    }
+    input:checked ~ label span {
+        background: transparent;
+    }
+    input:checked ~ label span:before {
+        transform: rotate(-45deg);
+    }
+    input:checked ~ label span:after {
+        transform: rotate(45deg);
+    }
+    input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+        top: 0;
+    }
+    
+    @media screen and (min-width:834px) {
+        ul {
+            overflow: visible;
+            position: absolute;
+            top: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+        label span, input {
+            display: none;
+        }
+    }
+}
+
+
