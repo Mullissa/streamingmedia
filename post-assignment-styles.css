@@ -178,49 +178,75 @@ audio {
     left: 5px;
 }
 
-#heading2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0;
-    padding: 0;
-}
-
-main #playlists {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "#playlist1 #playlist2";
-    grid-gap: 0px;
+#playlists {
+    display: flex;
+    flex-direction: column;
     margin: 20px;
-    padding: 20px;
 }
 
-section #playlists {
-    width: auto;
+.yours,
+.curated {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
 }
 
-#playlists .curated {
-    background-color: var(--color-secondary);
+.yours section,
+.curated section {
+    position: relative;
+    margin: 20px;
 }
 
-#playlists .yours {
-    background-color: var(--color-accent);
+.yours div,
+.curated div {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 10px;
+    width: 100%;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
-section .yours {
-    background-color: var(--color-accent);
+.yours h3,
+.curated h3,
+.yours p,
+.curated p {
+    margin: 0;
 }
 
-.yours div {
-    background-color: var(--color-accent);
+.yours h3,
+.curated h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.yours h3, .curated h3 {
-    color: var(--color-neutral);
+.yours p,
+.curated p {
+    font-size: 1em;
 }
 
-.yours p, .curated p {
-    color: var(--color-neutral);
+.link {
+    margin-top: auto; /* Push the link to the bottom of the container */
 }
+
+.yours, .curated {
+    order: 1; /* Ensure Yours comes first, then Curated */
+}
+
+.curated {
+    margin-top: 20px; /* Add spacing between Yours and Curated */
+}
+
+h2 {
+    order: -1; /* Move the h2 to the top */
+    font-size: 1.5em; /* Adjust font size for h2 */
+    font-weight: bold; /* Optional: Add bold font for h2 */
+    margin-bottom: 10px; /* Optional: Add space between h2 and columns */
+}
+
+
+
 
 footer p {
     font-size: .75em;
